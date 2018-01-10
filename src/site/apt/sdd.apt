@@ -1,0 +1,49 @@
+Apt Software Design Description 
+
+=====================
+
+[model/AptComponent.jpg] Fonctions principales
+
+* Liste des composants paticipants à tc-osgi-apt
+
+** @req SDD_APT_010
+
+  <tc-osgi-bundle-apt-io>
+
+  Le composant de lecture ecriture est defini en java et utilise des patterns pour lire ou generer les fichier apt
+  
+        * @version 0.1.0
+        
+        * @track SRS_APT_010
+        
+** @req SDD_APT_020
+
+  <tc-osgi-bundle-apt-io>
+
+  Le composant de lecture ecriture est utilisable sous la forme d'un bundle entrant dans tc-osgi mais aussi sous la forme d'un simple jar
+  
+        * @version 0.1.0
+        
+        * @track SRS_APT_010
+ 
+** @req SDD_APT_030
+
+  <tc-osgi-bundle-apt-gui>
+
+  Le client lourd est un bundle java offrant un ihm via swing
+  
+        * @version 0.1.0   
+        
+        * @track SRS_APT_030
+        
+        * @depend SDD_APT_010, SDD_APT_020    
+        
+** @req SDD_APT_040
+
+  Le client web est un bundle java offrant un ihm via gwt
+  
+        * @version x.x.x   
+        
+        * @track SRS_APT_020
+        
+        * @depend SDD_APT_010, SDD_APT_020  

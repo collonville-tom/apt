@@ -1,0 +1,27 @@
+Apt-IO Software Software Design Description 
+
+* Spécifications
+
+** @req SDD_BUNDLE_APT_GUI_010
+
+  Le composant utilise le service IAptIOService pour charger et sauvegarder les fichiers apts
+  
+        * @version 0.1.0
+        
+        * @track SRS_BUNDLE_APT_GUI_020, SRS_BUNDLE_APT_GUI_010, SRS_BUNDLE_APT_GUI_030, SRS_BUNDLE_APT_GUI_040
+        
+** @req SDD_BUNDLE_APT_GUI_020
+
+  Le composant utilise une JTree pour lister les fichiers apt dans un repertoire et ses sous-repertoires
+  
+        * @version 0.1.0
+        
+        * @track SRS_BUNDLE_APT_GUI_050  
+
+** @req SDD_BUNDLE_APT_GUI_030
+
+  Le composant utilise une JTable pour exposer le contenu d'un fichier apt
+  
+        * @version 0.1.0
+        
+        * @track SRS_BUNDLE_APT_GUI_060    

@@ -1,0 +1,9 @@
+tc-osgi-equinox-loader-${equinox-loader.version}${snapshot}.tar.gz
+tc-osgi-bundle-utils-${utils.version}${snapshot}.tar.gz
+tc-osgi-bundle-utils-interfaces-${utils.interfaces.version}${snapshot}.tar.gz
+tc-osgi-bundle-spring-wrapper-${spring.wrapper.version}${snapshot}.tar.gz
+tc-osgi-bundle-apt-gui-${apt.gui.version}${snapshot}.tar.gz
+tc-osgi-bundle-apt-io-${apt.io.version}${snapshot}.tar.gz
+tc-osgi-bundle-apt-io-interfaces-${apt.io.interfaces.version}${snapshot}.tar.gz
+tc-osgi-bundle-gui-utils-${gui.utils.version}${snapshot}.tar.gz
+tc-osgi-bundle-gui-utils-interfaces-${gui.utils.interfaces.version}${snapshot}.tar.gz

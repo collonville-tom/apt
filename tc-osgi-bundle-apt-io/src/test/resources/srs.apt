@@ -1,0 +1,27 @@
+Requirement-Tracking-apt Specification @version 0.0.1
+
+* Liste des projets
+
+** @req SRS_BUNDLE_APT_CONNECTOR_010
+
+  Le composant fourni la capacité de lecture de fichier apt utilisant les symboles propre aux fichiers apt
+  
+        * @version 0.0.1
+        
+        * @track SRS_TC_140
+        
+** @req SRS_BUNDLE_APT_CONNECTOR_020
+
+  Le composant fourni la capacité d'ecriture de fichier apt utilisant les symboles propre aux fichiers apt 
+  
+        * @version 0.0.1
+        
+        * @track SRS_TC_140
+
+** @req SRS_BUNDLE_APT_CONNECTOR_030
+
+  Le composant liste les marqueurs permettant l'identification des elements de base du format apt 
+  
+        * @version 0.0.1
+        
+        * @track SRS_TC_140        

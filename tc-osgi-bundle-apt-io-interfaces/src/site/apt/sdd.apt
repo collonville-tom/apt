@@ -1,0 +1,24 @@
+Apt-IO Software Software Design Description
+
+=====================
+
+[model/AptIoClass.jpg] Conception Apt-IO
+
+* Spécifications
+
+** @req SDD_BUNDLE_APT_IO_010
+
+  Le composant fourni la capacité de lecture/ecriture de fichier apt et de son contenu en utilisant le pattern visiteur fourni dans Utils et une enum de symbol propre au fichier apt
+  
+        * @version 0.1.1
+        
+        * @track SRS_BUNDLE_APT_IO_010, SRS_BUNDLE_APT_IO_020, SRS_BUNDLE_APT_IO_030, SRS_BUNDLE_APT_IO_050
+        
+** @req SDD_BUNDLE_APT_IO_020
+
+  Le composant definit le service osgi IAptIoService et AptConnector
+  
+        * @version 0.1.0
+        
+        * @track SRS_BUNDLE_APT_IO_040
+

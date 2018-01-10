@@ -1,0 +1,42 @@
+Apt Software Requirements Specification
+
+=====================
+
+[model/AptUC.jpg] Fonctions principales
+
+* Liste des composants paticipants à tc-osgi-apt
+
+** @req SRS_APT_010
+
+  <tc-osgi-bundle-apt-io>
+
+  Le composant permet la lecture/ecriture de fichiers apt.
+  
+        * @version 0.1.0
+        
+        * @track SRS_TC_150
+        
+ 
+** @req SRS_APT_020
+
+  le composant fourni une interface web permettant d'effectuer une edition des fichiers apt 
+  
+        * @version x.x.x
+        
+        * @track SRS_TC_150
+        
+        * @depend SRS_APT_010
+        
+** @req SRS_APT_030
+
+  <tc-osgi-bundle-apt-gui>
+
+  le composant fourni une interface client lourd permettant d'effectuer une edition des fichiers apt
+  
+        * @version 0.1.0   
+        
+        * @track SRS_TC_150
+        
+        * @depend SRS_APT_010   
+        
+              

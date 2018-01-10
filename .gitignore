@@ -1,0 +1,10 @@
+/.settings
+/pom.xml~
+/.project
+/.classpath
+/target
+srs.apt~
+site.xml~
+/.~lock.Taches.ods#
+
+/bundles/

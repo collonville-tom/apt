@@ -1,0 +1,75 @@
+Apt-GUI Software Requirements Specification 
+
+* Spécifications
+
+[model/ProtoIHM.png] 
+
+** @req SRS_BUNDLE_APT_GUI_010
+
+  Le composant fourni la capacité de chargement d'une liste de lichier apt
+  
+        * @version 0.1.0
+        
+        * @track SRS_APT_030
+        
+        * @depends SRS_BUNDLE_APT_IO_010, SRS_BUNDLE_APT_IO_020, SRS_BUNDLE_APT_IO_030
+        
+** @req SRS_BUNDLE_APT_GUI_020
+
+  Le composant fourni la capacité de verifier qu'un fichier respecte la syntaxe apt au chargement du fichier
+  
+        * @version 0.1.0
+        
+        * @track SRS_APT_030
+        
+        * @depends SRS_BUNDLE_APT_IO_030
+
+** @req SRS_BUNDLE_APT_GUI_030
+
+  Le composant fourni la capacité de sauvegarder un fichier apt 
+  
+        * @version 0.1.0
+        
+        * @track SRS_APT_030
+        
+        * @depends SRS_BUNDLE_APT_IO_010, SRS_BUNDLE_APT_IO_020, SRS_BUNDLE_APT_IO_030
+        
+** @req SRS_BUNDLE_APT_GUI_040
+
+  Le composant fourni la capacité de modifier avant sauvegarde les elements d'un ficher apt
+  
+        * @version 0.1.0
+        
+        * @track SRS_APT_030
+        
+** @req SRS_BUNDLE_APT_GUI_050
+
+  Le composant fourni la capacité de charger comme un projet un repertoire et d'exposer ses fichiers apt pour pouvoir les selections avant edition
+  
+        * @version 0.1.0
+        
+        * @track SRS_APT_030
+        
+** @req SRS_BUNDLE_APT_GUI_060
+
+  Le composant fourni la capacité de presenter le contenu d'un fichier apt avant modification dans une sorte de tableau
+  
+        * @version 0.1.0
+        
+        * @track SRS_APT_030
+        
+** @req SRS_BUNDLE_APT_GUI_070
+
+  Le composant fourni la capacité d'inserer une ligne vide dans le document avant edition
+
+        * @version 0.1.0
+
+        * @track SRS_APT_030
+        
+** @req SRS_BUNDLE_APT_GUI_080
+
+  Le composant fourni la capacité de supprimer une ligne dans le document
+
+        * @version 0.1.0
+
+        * @track SRS_APT_030

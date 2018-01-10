@@ -1,0 +1,45 @@
+Apt-IO Software Requirements Specification
+
+* Spécifications
+
+** @req SRS_BUNDLE_APT_IO_010
+
+  Le composant fourni la capacité de lecture de fichier apt utilisant les symboles propre aux fichiers apt
+  
+        * @version 0.1.1
+        
+        * @track SRS_APT_010
+        
+        * @depend SRS_BUNDLE_APT_IO_050
+        
+** @req SRS_BUNDLE_APT_IO_020
+
+  Le composant fourni la capacité d'ecriture de fichier apt utilisant les symboles propre aux fichiers apt 
+  
+        * @version 0.1.0
+        
+        * @track SRS_APT_010
+
+** @req SRS_BUNDLE_APT_IO_030
+
+  Le composant liste les marqueurs permettant l'identification des elements de base du format apt 
+  
+        * @version 0.1.0
+        
+        * @track SRS_APT_010
+        
+** @req SRS_BUNDLE_APT_IO_040
+
+  Le composant est utilisable sous la forme d'un service OSGI 
+  
+        * @version 0.1.0
+        
+        * @track SRS_APT_010
+        
+** @req SRS_BUNDLE_APT_IO_050
+
+  Le composant fourni la capacité de lecture de contenu de fichier apt
+  
+        * @version 0.1.1
+        
+        * @track SRS_APT_010

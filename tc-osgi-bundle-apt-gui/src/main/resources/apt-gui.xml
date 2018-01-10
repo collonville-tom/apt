@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConfigurationLibrary
+	xmlns="http://collonville.thomas.fr/tc-osgi-bundle-utils/config-file-schema">
+	<configFiles>
+		<defaultValue>target,.settings,main,test,resources,bundles</defaultValue>
+		<valueType>java.lang.String</valueType>
+		<fieldName>listOfExcludeDir</fieldName>
+		<className>org.tc.osgi.bundle.apt.gui.conf.AptGuiPropertyFile</className>
+	</configFiles>
+	<configFiles>
+		<defaultValue>tc-osgi-bundle-apt-io</defaultValue>
+		<valueType>java.lang.String</valueType>
+		<fieldName>aptIoDependencyBundleName</fieldName>
+		<className>org.tc.osgi.bundle.apt.gui.module.activator.AptGuiActivator</className>
+	</configFiles>
+	<configFiles>
+		<defaultValue>tc-osgi-bundle-gui-utils</defaultValue>
+		<valueType>java.lang.String</valueType>
+		<fieldName>guiUtilsDependencyBundleName</fieldName>
+		<className>org.tc.osgi.bundle.apt.gui.module.activator.AptGuiActivator</className>
+	</configFiles>
+	<configFiles>
+		<defaultValue>Apt Editor</defaultValue>
+		<valueType>java.lang.String</valueType>
+		<fieldName>appTitle</fieldName>
+		<className>org.tc.osgi.bundle.apt.gui.ihm.frame.AptGuiFrame</className>
+	</configFiles>
+</ConfigurationLibrary>
+
+

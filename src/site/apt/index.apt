@@ -1,0 +1,7 @@
+Introduction 
+
+  Le composant apt a pour but de simplifier le chargement ou la serialisation de fichier apt et de fournir une ihm simple pour editer/sauvegarder des fichiers apt de facon a en garantir la mise en page (plutot qu'une edition sous format texte qui est source d'erreurs).
+
+  Le but plus global est ainsi de simplifier la realisation des site maven auto-generé en garantissant une syntaxe formatée.
+
+  Ce composant se place donc sur le champs applicatif des applications standarts metier ou le client direct est un developpeur voulant decrire et exploiter les fichiers apt des projets maven.

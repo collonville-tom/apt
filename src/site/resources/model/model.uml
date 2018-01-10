@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_2u65ABpjEeSBpavu8DPN6w" name="NewModel">
+  <ownedComment xmi:id="_W-3LQBpkEeSBpavu8DPN6w" annotatedElement="_2u65ABpjEeSBpavu8DPN6w _M7XtEBpkEeSBpavu8DPN6w">
+    <body>SRS_APT_010
+SRS_APT_030</body>
+  </ownedComment>
+  <ownedComment xmi:id="_XTpvgBpkEeSBpavu8DPN6w" annotatedElement="_2u65ABpjEeSBpavu8DPN6w _SY3QgBpkEeSBpavu8DPN6w">
+    <body>SRS_APT_020</body>
+  </ownedComment>
+  <ownedComment xmi:id="_HQNkQBpoEeSBpavu8DPN6w" annotatedElement="_2u65ABpjEeSBpavu8DPN6w _ULu08BpnEeSBpavu8DPN6w">
+    <body>SDD_APT_010
+SDD_APT_020</body>
+  </ownedComment>
+  <ownedComment xmi:id="_I15IoBpoEeSBpavu8DPN6w" annotatedElement="_2u65ABpjEeSBpavu8DPN6w _ffDjUBpnEeSBpavu8DPN6w">
+    <body>SDD_APT_030</body>
+  </ownedComment>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_MXWaABpkEeSBpavu8DPN6w" name="Actor1"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_M7XtEBpkEeSBpavu8DPN6w" name="Editer les fichiers apt via une ihm"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_SY3QgBpkEeSBpavu8DPN6w" name="Editer les fichiers via une interface web">
+    <generalization xmi:id="_en5ZMBpkEeSBpavu8DPN6w" general="_M7XtEBpkEeSBpavu8DPN6w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_WG_vIBpkEeSBpavu8DPN6w" memberEnd="_WG_vIRpkEeSBpavu8DPN6w _WHAWMBpkEeSBpavu8DPN6w">
+    <name xsi:nil="true"/>
+    <ownedEnd xmi:id="_WG_vIRpkEeSBpavu8DPN6w" type="_MXWaABpkEeSBpavu8DPN6w" association="_WG_vIBpkEeSBpavu8DPN6w"/>
+    <ownedEnd xmi:id="_WHAWMBpkEeSBpavu8DPN6w" type="_M7XtEBpkEeSBpavu8DPN6w" association="_WG_vIBpkEeSBpavu8DPN6w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_WlAg0BpkEeSBpavu8DPN6w" memberEnd="_WlBH4BpkEeSBpavu8DPN6w _WlBu8BpkEeSBpavu8DPN6w">
+    <name xsi:nil="true"/>
+    <ownedEnd xmi:id="_WlBH4BpkEeSBpavu8DPN6w" type="_MXWaABpkEeSBpavu8DPN6w" association="_WlAg0BpkEeSBpavu8DPN6w"/>
+    <ownedEnd xmi:id="_WlBu8BpkEeSBpavu8DPN6w" type="_SY3QgBpkEeSBpavu8DPN6w" association="_WlAg0BpkEeSBpavu8DPN6w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_ULu08BpnEeSBpavu8DPN6w" name="tc-osgi-bundle-apt-io">
+    <interfaceRealization xmi:id="__WRzkBpnEeSBpavu8DPN6w" name="tc-osgi-bundle-apt-ioToIAptIOService" client="_ULu08BpnEeSBpavu8DPN6w" supplier="_vOFoABpnEeSBpavu8DPN6w" contract="_vOFoABpnEeSBpavu8DPN6w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_ffDjUBpnEeSBpavu8DPN6w" name="tc-osgi-bundle-apt-gui"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_ncf7ABpnEeSBpavu8DPN6w" name="IUtilsService"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_rENokBpnEeSBpavu8DPN6w" name="IUtilsServiceTotc-osgi-bundle-apt-gui" client="_ffDjUBpnEeSBpavu8DPN6w" supplier="_ncf7ABpnEeSBpavu8DPN6w"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_roL4UBpnEeSBpavu8DPN6w" name="IUtilsServiceTotc-osgi-bundle-apt-io" client="_ULu08BpnEeSBpavu8DPN6w" supplier="_ncf7ABpnEeSBpavu8DPN6w"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_vOFoABpnEeSBpavu8DPN6w" name="IAptIOService"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_6PjxYBpnEeSBpavu8DPN6w" name="IAptIOServiceTotc-osgi-bundle-apt-gui" client="_ffDjUBpnEeSBpavu8DPN6w" supplier="_vOFoABpnEeSBpavu8DPN6w"/>
+</uml:Model>

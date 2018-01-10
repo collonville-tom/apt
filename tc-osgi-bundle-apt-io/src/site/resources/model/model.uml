@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_iNiW0BrrEeSPa-dmYJnD7A">
+  <ownedComment xmi:id="_tPCYkBrvEeSPa-dmYJnD7A" annotatedElement="_iNiW0BrrEeSPa-dmYJnD7A _EUkboBruEeSPa-dmYJnD7A _cZmh8BruEeSPa-dmYJnD7A">
+    <body>SDD_BUNDLE_APT_IO_020</body>
+  </ownedComment>
+  <ownedComment xmi:id="_y4WxgBrvEeSPa-dmYJnD7A" annotatedElement="_iNiW0BrrEeSPa-dmYJnD7A _sDAKoBrsEeSPa-dmYJnD7A _Fhi3ABrsEeSPa-dmYJnD7A _4yAz4BrsEeSPa-dmYJnD7A">
+    <body>SDD_BUNDLE_APT_IO_010</body>
+  </ownedComment>
+  <name xsi:nil="true"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_r3PcABrrEeSPa-dmYJnD7A" name="AptObject">
+    <ownedAttribute xmi:id="_cWi40BrsEeSPa-dmYJnD7A" name="content">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cWjf4BrsEeSPa-dmYJnD7A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cWkG8BrsEeSPa-dmYJnD7A" value="*"/>
+    </ownedAttribute>
+    <interfaceRealization xmi:id="_tFgJcBrsEeSPa-dmYJnD7A" client="_r3PcABrrEeSPa-dmYJnD7A" supplier="_sDAKoBrsEeSPa-dmYJnD7A" contract="_sDAKoBrsEeSPa-dmYJnD7A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_yTyosBrrEeSPa-dmYJnD7A" name="aptObjectsToAptObjects" memberEnd="_yTzPwBrrEeSPa-dmYJnD7A _yUHY0RrrEeSPa-dmYJnD7A" navigableOwnedEnd="_yTzPwBrrEeSPa-dmYJnD7A _yUHY0RrrEeSPa-dmYJnD7A">
+    <ownedEnd xmi:id="_yTzPwBrrEeSPa-dmYJnD7A" name="parent" type="_r3PcABrrEeSPa-dmYJnD7A" association="_yTyosBrrEeSPa-dmYJnD7A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yUGxwBrrEeSPa-dmYJnD7A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yUHY0BrrEeSPa-dmYJnD7A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_yUHY0RrrEeSPa-dmYJnD7A" name="aptObjects" type="_r3PcABrrEeSPa-dmYJnD7A" association="_yTyosBrrEeSPa-dmYJnD7A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yUYekBrrEeSPa-dmYJnD7A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yUYekRrrEeSPa-dmYJnD7A" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_Fhi3ABrsEeSPa-dmYJnD7A" name="AptType">
+    <ownedLiteral xmi:id="_WJe5oBrsEeSPa-dmYJnD7A" name="TITLE, PARAGRAPHE, CHAPTER, SUBCHAPTER, ITEM, UNKNOW, EMPTYLINE, DELIMITER, PICTURE, FILE"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_IlUKABrsEeSPa-dmYJnD7A" name="AptObjects" memberEnd="_IlUKARrsEeSPa-dmYJnD7A _IlkoshrsEeSPa-dmYJnD7A" navigableOwnedEnd="_IlkoshrsEeSPa-dmYJnD7A">
+    <ownedEnd xmi:id="_IlUKARrsEeSPa-dmYJnD7A" name="aptObjects" type="_r3PcABrrEeSPa-dmYJnD7A" association="_IlUKABrsEeSPa-dmYJnD7A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IlkosBrsEeSPa-dmYJnD7A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IlkosRrsEeSPa-dmYJnD7A" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_IlkoshrsEeSPa-dmYJnD7A" name="aptType" type="_Fhi3ABrsEeSPa-dmYJnD7A" association="_IlUKABrsEeSPa-dmYJnD7A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Il0gUBrsEeSPa-dmYJnD7A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Il0gURrsEeSPa-dmYJnD7A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_sDAKoBrsEeSPa-dmYJnD7A" name="IVisitable">
+    <ownedOperation xmi:id="_EcVF8BrtEeSPa-dmYJnD7A" name="accept"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_zNFLsBrsEeSPa-dmYJnD7A" name="AbstractAptObjectVisitor">
+    <generalization xmi:id="_Gc52kBrtEeSPa-dmYJnD7A" general="_4yAz4BrsEeSPa-dmYJnD7A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_4yAz4BrsEeSPa-dmYJnD7A" name="AbstractVisitor">
+    <ownedOperation xmi:id="_B4-YYBrtEeSPa-dmYJnD7A" name="visit"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_8nc0YBrsEeSPa-dmYJnD7A" name="AbstractVisitors" memberEnd="_8ndbcBrsEeSPa-dmYJnD7A _8nssARrsEeSPa-dmYJnD7A" navigableOwnedEnd="_8nssARrsEeSPa-dmYJnD7A">
+    <ownedEnd xmi:id="_8ndbcBrsEeSPa-dmYJnD7A" name="abstractVisitors" type="_4yAz4BrsEeSPa-dmYJnD7A" association="_8nc0YBrsEeSPa-dmYJnD7A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8nsE8BrsEeSPa-dmYJnD7A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8nssABrsEeSPa-dmYJnD7A" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_8nssARrsEeSPa-dmYJnD7A" name="iVisitables" type="_sDAKoBrsEeSPa-dmYJnD7A" association="_8nc0YBrsEeSPa-dmYJnD7A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8n78kBrsEeSPa-dmYJnD7A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8n78kRrsEeSPa-dmYJnD7A" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_U2d9IBrtEeSPa-dmYJnD7A" name="AptDecoder">
+    <generalization xmi:id="_btF2sBrtEeSPa-dmYJnD7A" general="_zNFLsBrsEeSPa-dmYJnD7A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ZeyzIBrtEeSPa-dmYJnD7A" name="AptEncoder">
+    <generalization xmi:id="_bPfUsBrtEeSPa-dmYJnD7A" general="_zNFLsBrsEeSPa-dmYJnD7A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_EUkboBruEeSPa-dmYJnD7A" name="AptConnector">
+    <ownedOperation xmi:id="_JhoWYBruEeSPa-dmYJnD7A" name="processAptFile"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_MZc4EBruEeSPa-dmYJnD7A" name="AptConnectors" memberEnd="_MZdfIBruEeSPa-dmYJnD7A _MZeGMRruEeSPa-dmYJnD7A" navigableOwnedEnd="_MZeGMRruEeSPa-dmYJnD7A">
+    <ownedEnd xmi:id="_MZdfIBruEeSPa-dmYJnD7A" name="aptConnector" type="_EUkboBruEeSPa-dmYJnD7A" association="_MZc4EBruEeSPa-dmYJnD7A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MZdfIRruEeSPa-dmYJnD7A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MZeGMBruEeSPa-dmYJnD7A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_MZeGMRruEeSPa-dmYJnD7A" name="aptDecoder" type="_U2d9IBrtEeSPa-dmYJnD7A" association="_MZc4EBruEeSPa-dmYJnD7A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MZeGMhruEeSPa-dmYJnD7A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MZetQBruEeSPa-dmYJnD7A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_PBG20BruEeSPa-dmYJnD7A" name="AptConnector" memberEnd="_PBHd4BruEeSPa-dmYJnD7A _PBIE8hruEeSPa-dmYJnD7A" navigableOwnedEnd="_PBIE8hruEeSPa-dmYJnD7A">
+    <ownedEnd xmi:id="_PBHd4BruEeSPa-dmYJnD7A" name="aptConnector" type="_EUkboBruEeSPa-dmYJnD7A" association="_PBG20BruEeSPa-dmYJnD7A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PBIE8BruEeSPa-dmYJnD7A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PBIE8RruEeSPa-dmYJnD7A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_PBIE8hruEeSPa-dmYJnD7A" name="aptEncoder" type="_ZeyzIBrtEeSPa-dmYJnD7A" association="_PBG20BruEeSPa-dmYJnD7A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PBIsABruEeSPa-dmYJnD7A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PBIsARruEeSPa-dmYJnD7A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ZPdhMBruEeSPa-dmYJnD7A" name="AptConnectors" memberEnd="_ZPeIQBruEeSPa-dmYJnD7A _ZPfWYhruEeSPa-dmYJnD7A" navigableOwnedEnd="_ZPfWYhruEeSPa-dmYJnD7A">
+    <ownedEnd xmi:id="_ZPeIQBruEeSPa-dmYJnD7A" name="aptConnector" type="_EUkboBruEeSPa-dmYJnD7A" association="_ZPdhMBruEeSPa-dmYJnD7A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZPfWYBruEeSPa-dmYJnD7A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZPfWYRruEeSPa-dmYJnD7A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_ZPfWYhruEeSPa-dmYJnD7A" name="aptObjects" type="_r3PcABrrEeSPa-dmYJnD7A" association="_ZPdhMBruEeSPa-dmYJnD7A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZPf9cBruEeSPa-dmYJnD7A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZPf9cRruEeSPa-dmYJnD7A" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_cZmh8BruEeSPa-dmYJnD7A" name="IAptIoService">
+    <ownedOperation xmi:id="_hAktEBruEeSPa-dmYJnD7A" name="getAptObjectList"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jGDL0BruEeSPa-dmYJnD7A" name="IAptIoServices" memberEnd="_jGDL0RruEeSPa-dmYJnD7A _jGScYRruEeSPa-dmYJnD7A" navigableOwnedEnd="_jGScYRruEeSPa-dmYJnD7A">
+    <ownedEnd xmi:id="_jGDL0RruEeSPa-dmYJnD7A" name="iAptIoService" type="_cZmh8BruEeSPa-dmYJnD7A" association="_jGDL0BruEeSPa-dmYJnD7A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jGR1UBruEeSPa-dmYJnD7A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jGScYBruEeSPa-dmYJnD7A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_jGScYRruEeSPa-dmYJnD7A" name="aptConnector" type="_EUkboBruEeSPa-dmYJnD7A" association="_jGDL0BruEeSPa-dmYJnD7A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jGhF4BruEeSPa-dmYJnD7A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jGhs8BruEeSPa-dmYJnD7A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>

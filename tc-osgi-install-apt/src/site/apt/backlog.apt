@@ -1,0 +1,24 @@
+Backlog
+
+* attentes
+
+		* Mettre a jour documentation SRS
+		
+		* Mettre a jour documentation SDD
+		
+		* Mettre a jour documentation STP
+		
+		* Mettre a jour documentation index
+		
+		* identifier les differentes procedures d'installation possible -> targz/deb avec connexion inetrnet ou sans
+		
+		* tester les  differentes procedures prevu, attention le script de prod doit etre adapté car il ne tire pas forcement tous les deb concerné (les targz oui mais par forcement proprement)
+	
+* acceptes
+
+* refuses
+
+* historique
+
+
+  

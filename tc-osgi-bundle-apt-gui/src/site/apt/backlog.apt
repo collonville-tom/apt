@@ -1,0 +1,29 @@
+Backlog
+
+* attentes
+
+		* Mettre a jour documentation SRS
+		
+		* Mettre a jour documentation SDD
+		
+		* Mettre a jour documentation STP
+		
+		* Mettre a jour documentation index
+
+		* 0.1.4 [MIN] Mettre en place test unitaire et test ihm
+        
+        * 0.1.4 [MIN] Le bouton Exit ne fonctionne pas
+		
+		* 0.1.4 [MIN] externaliser les chaines de caractere dans un fichier de conf de type bundle ressource
+
+		* 0.1.4 [MIN] integrer doc decrivant la structure de projets bundles avec interface gui, ce type de structure ne doit pas integrer de launcher comme dans le cas de l'exemple avec helloworld
+		
+		* 0.2.0 l'action open d'un fichier apt ne fonctionnement pas 
+		
+* acceptes
+
+* refuses
+
+* historique
+
+        

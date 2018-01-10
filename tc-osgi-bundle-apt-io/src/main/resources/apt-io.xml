@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConfigurationLibrary
+	xmlns="http://collonville.thomas.fr/tc-osgi-bundle-utils/config-file-schema">
+	<configFiles>
+		<defaultValue>\r\n</defaultValue>
+		<valueType>java.lang.String</valueType>
+		<fieldName>aptEOL</fieldName>
+		<className>org.tc.osgi.bundle.apt.io.conf.AptIoPropertyFile</className>
+	</configFiles>
+	<configFiles>
+		<defaultValue>  </defaultValue>
+		<valueType>java.lang.String</valueType>
+		<fieldName>PARAGRAPHE</fieldName>
+		<className>org.tc.osgi.bundle.apt.io.utils.AptSymbols</className>
+	</configFiles>
+	<configFiles>
+		<defaultValue>* </defaultValue>
+		<valueType>java.lang.String</valueType>
+		<fieldName>CHAPTER</fieldName>
+		<className>org.tc.osgi.bundle.apt.io.utils.AptSymbols</className>
+	</configFiles>
+	<configFiles>
+		<defaultValue>** </defaultValue>
+		<valueType>java.lang.String</valueType>
+		<fieldName>SUBCHAPTER</fieldName>
+		<className>org.tc.osgi.bundle.apt.io.utils.AptSymbols</className>
+	</configFiles>
+	<configFiles>
+		<defaultValue>        *</defaultValue>
+		<valueType>java.lang.String</valueType>
+		<fieldName>ITEM</fieldName>
+		<className>org.tc.osgi.bundle.apt.io.utils.AptSymbols</className>
+	</configFiles>
+	<configFiles>
+		<defaultValue>====</defaultValue>
+		<valueType>java.lang.String</valueType>
+		<fieldName>DELIMITER</fieldName>
+		<className>org.tc.osgi.bundle.apt.io.utils.AptSymbols</className>
+	</configFiles>
+	<configFiles>
+		<defaultValue>[</defaultValue>
+		<valueType>java.lang.String</valueType>
+		<fieldName>PICTURE</fieldName>
+		<className>org.tc.osgi.bundle.apt.io.utils.AptSymbols</className>
+	</configFiles>
+</ConfigurationLibrary>
+
+
