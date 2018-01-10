@@ -19,14 +19,12 @@
         <dependency>
             <groupId>org.tc.osgi.bundle.utils</groupId>
             <artifactId>tc-osgi-bundle-utils-interfaces</artifactId>
-            <type>bundle</type>
             <classifier>assembly</classifier>
             <version>${utils.interfaces.version}${snapshot}</version>
         </dependency>
         <dependency>
             <groupId>org.tc.osgi.bundle.apt</groupId>
             <artifactId>tc-osgi-bundle-apt-io-interfaces</artifactId>
-            <type>bundle</type>
             <classifier>assembly</classifier>
             <version>${apt.io.interfaces.version}${snapshot}</version>
         </dependency>
