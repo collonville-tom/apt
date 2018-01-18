@@ -38,7 +38,6 @@
 			<useDefaultExcludes>true</useDefaultExcludes>
 			<filtered>true</filtered>
 			<includes>
-				<include>apt-io.xml</include>
 			</includes>
 		</fileSet>
 	</fileSets>
