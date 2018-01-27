@@ -81,4 +81,36 @@ public class AptConnectorTest {
 		} 
 
 	}
+	
+	@Test
+	public void test3() {
+		LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
+		PropertyServiceProxy.getInstance().setService(new PropertyUtilsServiceImpl());
+		AptConnector connector;
+		try {
+			connector = new AptConnector("src/test/resources/srs2.apt");
+			
+			List<IAptObject> lo= new AptCleaner().clean(connector.processAptFile());
+			
+		} catch (FieldTrackingAssignementException| AptConnectorException  e) {
+			Assert.assertNotNull(e);
+		} 
+
+	}
+	
+	@Test
+	public void test4() {
+		LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
+		PropertyServiceProxy.getInstance().setService(new PropertyUtilsServiceImpl());
+		AptConnector connector;
+		try {
+			connector = new AptConnector("src/test/resources");
+			
+			List<IAptObject> lo= new AptCleaner().clean(connector.processAptFile());
+			
+		} catch (FieldTrackingAssignementException| AptConnectorException  e) {
+			Assert.assertNotNull(e);
+		} 
+
+	}
 }
