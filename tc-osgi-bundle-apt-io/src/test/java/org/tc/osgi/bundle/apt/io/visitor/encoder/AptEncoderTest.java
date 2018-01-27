@@ -4,7 +4,9 @@ import org.junit.Test;
 import org.tc.osgi.bundle.apt.io.interf.model.AptType;
 import org.tc.osgi.bundle.apt.io.model.AptObject;
 import org.tc.osgi.bundle.apt.io.module.service.LoggerServiceProxy;
+import org.tc.osgi.bundle.apt.io.module.service.PropertyServiceProxy;
 import org.tc.osgi.bundle.utils.module.service.impl.LoggerUtilsServiceImpl;
+import org.tc.osgi.bundle.utils.module.service.impl.PropertyUtilsServiceImpl;
 
 /**
  * AptEncoderTest.java.
@@ -21,6 +23,7 @@ public class AptEncoderTest {
 	@Test
 	public void test() {
 		LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
+		PropertyServiceProxy.getInstance().setService(new PropertyUtilsServiceImpl());
 		final AptObject file = new AptObject(AptType.FILE, "Fichier");
 		file.getListOfAptElement().add(new AptObject(AptType.TITLE, "Titre"));
 		file.getListOfAptElement().add(new AptObject(AptType.PARAGRAPHE, "Blabla1"));

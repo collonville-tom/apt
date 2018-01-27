@@ -9,9 +9,11 @@ import org.junit.Test;
 import org.tc.osgi.bundle.apt.io.exception.AptConnectorException;
 import org.tc.osgi.bundle.apt.io.interf.model.IAptObject;
 import org.tc.osgi.bundle.apt.io.module.service.LoggerServiceProxy;
+import org.tc.osgi.bundle.apt.io.module.service.PropertyServiceProxy;
 import org.tc.osgi.bundle.apt.io.utils.AptCleaner;
 import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementException;
 import org.tc.osgi.bundle.utils.module.service.impl.LoggerUtilsServiceImpl;
+import org.tc.osgi.bundle.utils.module.service.impl.PropertyUtilsServiceImpl;
 
 /**
  * AptConnectorTest.java.
@@ -28,6 +30,7 @@ public class AptConnectorTest {
 	@Test
 	public void test() {
 		LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
+		PropertyServiceProxy.getInstance().setService(new PropertyUtilsServiceImpl());
 		AptConnector connector;
 		try {
 			connector = new AptConnector("src/test/resources/srs.apt");

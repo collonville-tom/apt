@@ -15,8 +15,10 @@ import org.tc.osgi.bundle.apt.io.interf.model.AptType;
 import org.tc.osgi.bundle.apt.io.interf.model.IAptObject;
 import org.tc.osgi.bundle.apt.io.model.AptObject;
 import org.tc.osgi.bundle.apt.io.module.service.LoggerServiceProxy;
+import org.tc.osgi.bundle.apt.io.module.service.PropertyServiceProxy;
 import org.tc.osgi.bundle.apt.io.visitor.decoder.AptDecoder;
 import org.tc.osgi.bundle.utils.module.service.impl.LoggerUtilsServiceImpl;
+import org.tc.osgi.bundle.utils.module.service.impl.PropertyUtilsServiceImpl;
 
 /**
  * AptFileTest.java.
@@ -34,7 +36,9 @@ public class AptFileTest {
 	public void test() {
 		try {
 			LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
+			PropertyServiceProxy.getInstance().setService(new PropertyUtilsServiceImpl());
 			final BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/srs.apt")));
+			
 			final List<String> l = new ArrayList<String>();
 			while (reader.ready()) {
 				l.add(reader.readLine());
@@ -47,6 +51,9 @@ public class AptFileTest {
 			Assert.fail(e.getMessage());
 		} catch (final IOException e) {
 			Assert.fail(e.getMessage());
+		}catch(final Exception e)
+		{
+			e.printStackTrace();
 		}
 	}
 }
