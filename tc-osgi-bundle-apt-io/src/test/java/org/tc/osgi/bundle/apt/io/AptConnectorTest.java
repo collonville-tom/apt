@@ -37,7 +37,9 @@ public class AptConnectorTest {
 			connector = new AptConnector("src/test/resources/srs.apt");
 			AptConnector connector2= new AptConnector("target/srs2.apt");
 			final List<IAptObject> lo = new AptCleaner().clean(connector.processAptFile());
-			// List<AptObject> lo = connector.processAptFile();
+			
+			
+			
 			final StringBuffer buff = new StringBuffer();
 			for (final IAptObject o : lo) {
 				buff.append(o.getAptType()).append(":");
@@ -50,6 +52,31 @@ public class AptConnectorTest {
 			LoggerServiceProxy.getInstance().getLogger(AptConnector.class).debug(buff.toString());
 			System.out.println(buff.toString());
 		} catch (FieldTrackingAssignementException| AptConnectorException | IOException e) {
+			Assert.fail(e.getMessage());
+		} 
+
+	}
+	
+	@Test
+	public void test2() {
+		LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
+		PropertyServiceProxy.getInstance().setService(new PropertyUtilsServiceImpl());
+		AptConnector connector;
+		try {
+			connector = new AptConnector("src/test/resources/srs.apt");
+			
+			List<IAptObject> lo= new AptCleaner().clean(connector.processAptFile());
+			connector.setDocument(lo);
+			lo=connector.getDocument();
+			
+			// List<AptObject> lo = connector.processAptFile();
+			final StringBuffer buff = new StringBuffer();
+			for (final IAptObject o : lo) {
+				buff.append(o.getAptType()).append(":");
+				buff.append(o.getContent()).append(System.lineSeparator());
+				
+			}
+		} catch (FieldTrackingAssignementException| AptConnectorException  e) {
 			Assert.fail(e.getMessage());
 		} 
 
