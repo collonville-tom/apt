@@ -10,7 +10,9 @@
 	<properties>
 		<build>0.2.0</build>
 		<utils.interfaces.version>0.1.0</utils.interfaces.version>
+		<utils.version>0.3.0</utils.version>
 		<gui.utils.interfaces.version>0.1.0</gui.utils.interfaces.version>
+		<gui.utils.version>0.2.0</gui.utils.version>
 		<apt.io.interfaces.version>0.1.0</apt.io.interfaces.version>
 		<snapshot>-SNAPSHOT</snapshot>
 	</properties>
@@ -21,6 +23,13 @@
 			<artifactId>tc-osgi-bundle-utils-interfaces</artifactId>
 			<classifier>assembly</classifier>
 			<version>${utils.interfaces.version}${snapshot}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.tc.osgi.bundle.utils</groupId>
+			<artifactId>tc-osgi-bundle-utils</artifactId>
+			<classifier>assembly</classifier>
+			<version>${utils.version}${snapshot}</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.tc.osgi.bundle.apt</groupId>
@@ -34,7 +43,12 @@
 			<classifier>assembly</classifier>
 			<version>${gui.utils.interfaces.version}${snapshot}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.tc.osgi.bundle.gui-utils</groupId>
+			<artifactId>tc-osgi-bundle-gui-utils</artifactId>
+			<version>${gui.utils.version}${snapshot}</version>
+			<scope>test</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.easytesting</groupId>
 			<artifactId>fest-swing-junit</artifactId>

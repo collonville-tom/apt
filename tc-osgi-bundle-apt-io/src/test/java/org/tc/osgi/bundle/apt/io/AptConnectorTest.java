@@ -1,6 +1,7 @@
 package org.tc.osgi.bundle.apt.io;
 
 
+import java.io.IOException;
 import java.util.List;
 
 import junit.framework.Assert;
@@ -34,17 +35,21 @@ public class AptConnectorTest {
 		AptConnector connector;
 		try {
 			connector = new AptConnector("src/test/resources/srs.apt");
+			AptConnector connector2= new AptConnector("srs2.apt");
 			final List<IAptObject> lo = new AptCleaner().clean(connector.processAptFile());
 			// List<AptObject> lo = connector.processAptFile();
 			final StringBuffer buff = new StringBuffer();
 			for (final IAptObject o : lo) {
 				buff.append(o.getAptType()).append(":");
 				buff.append(o.getContent()).append(System.lineSeparator());
+				connector.saveAptFile(o);
 			}
-
+			
+			
+			
 			LoggerServiceProxy.getInstance().getLogger(AptConnector.class).debug(buff.toString());
 			System.out.println(buff.toString());
-		} catch (FieldTrackingAssignementException| AptConnectorException e) {
+		} catch (FieldTrackingAssignementException| AptConnectorException | IOException e) {
 			Assert.fail(e.getMessage());
 		} 
 
