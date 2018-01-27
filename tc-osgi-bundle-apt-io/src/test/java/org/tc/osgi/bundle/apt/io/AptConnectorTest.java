@@ -35,14 +35,14 @@ public class AptConnectorTest {
 		AptConnector connector;
 		try {
 			connector = new AptConnector("src/test/resources/srs.apt");
-			AptConnector connector2= new AptConnector("srs2.apt");
+			AptConnector connector2= new AptConnector("target/srs2.apt");
 			final List<IAptObject> lo = new AptCleaner().clean(connector.processAptFile());
 			// List<AptObject> lo = connector.processAptFile();
 			final StringBuffer buff = new StringBuffer();
 			for (final IAptObject o : lo) {
 				buff.append(o.getAptType()).append(":");
 				buff.append(o.getContent()).append(System.lineSeparator());
-				connector.saveAptFile(o);
+				connector2.saveAptFile(o);
 			}
 			
 			
