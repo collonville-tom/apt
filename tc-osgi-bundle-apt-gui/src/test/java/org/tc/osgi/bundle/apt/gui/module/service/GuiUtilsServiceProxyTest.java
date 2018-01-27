@@ -30,6 +30,7 @@ public class GuiUtilsServiceProxyTest {
 		guiSe.setLoggerUtilsService(LoggerServiceProxy.getInstance());
 		
 		GuiUtilsServiceProxy.getInstance().setService(guiSe);
+		Assert.assertNotNull(GuiUtilsServiceProxy.getInstance().getService());
 		
 		JMenuItem item=Mockito.mock(JMenuItem.class);
 		Assert.assertNotNull(GuiUtilsServiceProxy.getInstance().getBasicMouseAdapter(item));

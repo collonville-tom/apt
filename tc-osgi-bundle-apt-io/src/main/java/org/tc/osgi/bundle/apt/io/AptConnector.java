@@ -85,7 +85,7 @@ public class AptConnector {
 	public List<IAptObject> processAptFile() throws AptConnectorException {
 		final List<String> l = new ArrayList<>();
 		try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-			if (file.exists() && file.isFile()) {
+			if (file.exists()) {
 				while (reader.ready()) {
 					l.add(reader.readLine());
 				}
