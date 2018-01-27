@@ -62,10 +62,7 @@ public class GuiUtilsServiceProxy implements IGuiUtilsService {
 
 	@Override
 	public WindowAdapter getBundleClosingWindowsAdapter(final BundleContext context, final String autoBundleName) throws TcOsgiException {
-		if (service == null) {
-			LoggerServiceProxy.getInstance().getLogger(GuiUtilsServiceProxy.class).debug("Le service n'a pas ete convenablement construit");
-		}
-
+		LoggerServiceProxy.getInstance().getLogger(GuiUtilsServiceProxy.class).debug("Etat du service GuiUtils :" + service);
 		return service.getBundleClosingWindowsAdapter(context, autoBundleName);
 	}
 

@@ -3,6 +3,7 @@ package org.tc.osgi.bundle.apt.io;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -45,7 +46,8 @@ public class AptConnector {
 	public AptConnector(final String filePath) {
 
 		file = new File(filePath);
-		LoggerServiceProxy.getInstance().getLogger(AptConnector.class).debug("Creation du connecteur apt for" + file.getAbsolutePath());
+		LoggerServiceProxy.getInstance().getLogger(AptConnector.class)
+				.debug("Creation du connecteur apt for" + file.getAbsolutePath());
 
 	}
 
@@ -81,23 +83,26 @@ public class AptConnector {
 	 * @throws IOException
 	 * @throws AptConnectorException
 	 */
-	public List<IAptObject> processAptFile() throws IOException, AptConnectorException {
-		if (file.exists() && file.isFile()) {
-			final BufferedReader reader = new BufferedReader(new FileReader(file));
-			final List<String> l = new ArrayList<String>();
-			while (reader.ready()) {
-				l.add(reader.readLine());
+	public List<IAptObject> processAptFile() throws AptConnectorException {
+		final List<String> l = new ArrayList<>();
+		try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+			if (file.exists() && file.isFile()) {
+				while (reader.ready()) {
+					l.add(reader.readLine());
+				}
 			}
-			reader.close();
-			return this.processAptFile(l);
-		} else {
-			throw new AptConnectorException("File apt does not exist");
+		} catch (IOException e) {
+			throw new AptConnectorException("File apt does not exist", e);
 		}
+		return this.processAptFile(l);
+
 	}
 
 	/**
 	 * processAptFile.
-	 * @param l List<String>
+	 * 
+	 * @param l
+	 *            List<String>
 	 * @return List<AptObject>
 	 */
 	public List<IAptObject> processAptFile(final List<String> l) {
@@ -111,22 +116,26 @@ public class AptConnector {
 
 	/**
 	 * saveAptFile.
-	 * @param aptObject AptObject
+	 * 
+	 * @param aptObject
+	 *            AptObject
 	 * @throws IOException
 	 */
 	public void saveAptFile(final IAptObject aptObject) throws IOException {
 		final AptEncoder encod = new AptEncoder();
 		aptObject.accept(encod);
 		LoggerServiceProxy.getInstance().getLogger(AptEncoder.class).debug(encod.getBuff().toString());
-		final BufferedWriter writer = new BufferedWriter(new FileWriter(file));
-		writer.write(encod.getBuff().toString());
-		writer.close();
+		try(BufferedWriter writer = new BufferedWriter(new FileWriter(file)))
+		{
+			writer.write(encod.getBuff().toString());
+		}
 	}
 
 	/**
 	 * setDocument.
 	 *
-	 * @param document List<AptObject>
+	 * @param document
+	 *            List<AptObject>
 	 */
 	public void setDocument(final List<IAptObject> document) {
 		this.document = document;
