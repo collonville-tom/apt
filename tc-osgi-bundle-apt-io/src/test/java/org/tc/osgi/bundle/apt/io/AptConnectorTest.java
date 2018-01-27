@@ -1,6 +1,6 @@
 package org.tc.osgi.bundle.apt.io;
 
-import java.io.IOException;
+
 import java.util.List;
 
 import junit.framework.Assert;
@@ -44,14 +44,9 @@ public class AptConnectorTest {
 
 			LoggerServiceProxy.getInstance().getLogger(AptConnector.class).debug(buff.toString());
 			System.out.println(buff.toString());
-		} catch (final AptConnectorException e) {
+		} catch (FieldTrackingAssignementException| AptConnectorException e) {
 			Assert.fail(e.getMessage());
-		} catch (final IOException e) {
-			Assert.fail(e.getMessage());
-			// }
-		} catch (final FieldTrackingAssignementException e) {
-			Assert.fail(e.getMessage());
-		}
+		} 
 
 	}
 }

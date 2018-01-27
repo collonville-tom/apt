@@ -41,13 +41,9 @@ public class AptCleanerTest {
 			}
 
 			LoggerServiceProxy.getInstance().getLogger(AptConnector.class).debug(buff.toString());
-		} catch (final AptConnectorException e) {
+		} catch (FieldTrackingAssignementException | AptConnectorException e) {
 			Assert.fail(e.getMessage());
-		} catch (final IOException e) {
-			Assert.fail(e.getMessage());
-		} catch (final FieldTrackingAssignementException e) {
-			Assert.fail(e.toString());
-		}
+		} 
 	}
 
 }
