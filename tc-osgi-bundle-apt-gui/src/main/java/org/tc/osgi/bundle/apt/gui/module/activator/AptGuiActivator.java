@@ -11,7 +11,7 @@ import org.tc.osgi.bundle.apt.gui.module.service.PropertyServiceProxy;
 import org.tc.osgi.bundle.apt.io.interf.module.service.IAptIoService;
 import org.tc.osgi.bundle.gui.utils.interf.module.service.IGuiUtilsService;
 import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementException;
-import org.tc.osgi.bundle.utils.interf.module.exception.TcOsgiException;
+import org.tc.osgi.bundle.utils.interf.exception.TcOsgiException;
 import org.tc.osgi.bundle.utils.interf.module.service.ILoggerUtilsService;
 import org.tc.osgi.bundle.utils.interf.module.service.IPropertyUtilsService;
 import org.tc.osgi.bundle.utils.interf.module.utils.AbstractTcOsgiActivator;
@@ -19,6 +19,7 @@ import org.tc.osgi.bundle.utils.interf.module.utils.TcOsgiProxy;
 
 /**
  * Activator.java.
+ * 
  * @author Collonville Thomas
  * @version 0.0.1
  */
@@ -89,8 +90,9 @@ public class AptGuiActivator extends AbstractTcOsgiActivator {
 		this.iPropertyUtilsService = new TcOsgiProxy<IPropertyUtilsService>(context, IPropertyUtilsService.class);
 		PropertyServiceProxy.getInstance().setService(this.iPropertyUtilsService.getInstance());
 
-		this.getIBundleUtilsService().getInstance().getBundleStarter().processOnBundle(context, this.getAptIoDependencyBundleName());
-		this.getIBundleUtilsService().getInstance().getBundleStarter().processOnBundle(context, this.getGuiUtilsDependencyBundleName());
+		// TODO mettre la version dans le yaml
+		this.getIBundleUtilsService().getInstance().getBundleStarter().processOnBundle(context, this.getAptIoDependencyBundleName(), "0.11.0.SNAPSHOT");
+		this.getIBundleUtilsService().getInstance().getBundleStarter().processOnBundle(context, this.getGuiUtilsDependencyBundleName(), "0.11.0.SNAPSHOT");
 
 	}
 
@@ -116,8 +118,7 @@ public class AptGuiActivator extends AbstractTcOsgiActivator {
 
 	public String getGuiUtilsDependencyBundleName() throws FieldTrackingAssignementException {
 		if (guiUtilsDependencyBundleName == null) {
-			PropertyServiceProxy.getInstance().getXMLPropertyFile(AptGuiPropertyFile.getInstance().getXMLFile()).fieldTraking(this,
-				"guiUtilsDependencyBundleName");
+			PropertyServiceProxy.getInstance().getYamlPropertyFile(AptGuiPropertyFile.getInstance().getYamlFile()).fieldTraking(this, "guiUtilsDependencyBundleName");
 		}
 		return guiUtilsDependencyBundleName;
 	}
@@ -128,8 +129,7 @@ public class AptGuiActivator extends AbstractTcOsgiActivator {
 
 	public String getAptIoDependencyBundleName() throws FieldTrackingAssignementException {
 		if (aptIoDependencyBundleName == null) {
-			PropertyServiceProxy.getInstance().getXMLPropertyFile(AptGuiPropertyFile.getInstance().getXMLFile())
-				.fieldTraking(this, "aptIoDependencyBundleName");
+			PropertyServiceProxy.getInstance().getYamlPropertyFile(AptGuiPropertyFile.getInstance().getYamlFile()).fieldTraking(this, "aptIoDependencyBundleName");
 		}
 		return aptIoDependencyBundleName;
 	}

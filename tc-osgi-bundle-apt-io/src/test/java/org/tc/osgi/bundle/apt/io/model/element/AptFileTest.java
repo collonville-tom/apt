@@ -8,8 +8,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import junit.framework.Assert;
-
 import org.junit.Test;
 import org.tc.osgi.bundle.apt.io.interf.model.AptType;
 import org.tc.osgi.bundle.apt.io.interf.model.IAptObject;
@@ -20,8 +18,11 @@ import org.tc.osgi.bundle.apt.io.visitor.decoder.AptDecoder;
 import org.tc.osgi.bundle.utils.module.service.impl.LoggerUtilsServiceImpl;
 import org.tc.osgi.bundle.utils.module.service.impl.PropertyUtilsServiceImpl;
 
+import junit.framework.Assert;
+
 /**
  * AptFileTest.java.
+ * 
  * @author Collonville Thomas
  * @version 0.0.1
  * @req STD_BUNDLE_APT_CONNECTOR_010
@@ -38,7 +39,7 @@ public class AptFileTest {
 			LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
 			PropertyServiceProxy.getInstance().setService(new PropertyUtilsServiceImpl());
 			final BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/srs.apt")));
-			
+
 			final List<String> l = new ArrayList<String>();
 			while (reader.ready()) {
 				l.add(reader.readLine());
@@ -51,8 +52,7 @@ public class AptFileTest {
 			Assert.fail(e.getMessage());
 		} catch (final IOException e) {
 			Assert.fail(e.getMessage());
-		}catch(final Exception e)
-		{
+		} catch (final Exception e) {
 			e.printStackTrace();
 		}
 	}

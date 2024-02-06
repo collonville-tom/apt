@@ -8,12 +8,12 @@
 
 	<fileSets>
 		<fileSet>
-			<directory>src/main/resources</directory>
-			<outputDirectory></outputDirectory>
+			<directory>src/main/debian/DEBIAN</directory>
+			<outputDirectory>DEBIAN</outputDirectory>
 			<useDefaultExcludes>true</useDefaultExcludes>
 			<filtered>true</filtered>
 			<includes>
-				<include>control.file</include>
+				<include>*</include>
 			</includes>
 		</fileSet>
 	</fileSets>

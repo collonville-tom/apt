@@ -39,6 +39,7 @@
 			<filtered>true</filtered>
 			<includes>
 				<include>apt-gui.xml</include>
+				<include>apt-gui.yaml</include>
 			</includes>
 		</fileSet>
 	</fileSets>

@@ -1,0 +1,29 @@
+config:
+   -  value: "\r\n"
+      type: java.lang.String
+      field: aptEOL
+      className: org.tc.osgi.bundle.apt.io.conf.AptIoPropertyFile
+   -  value: "  "
+      type: java.lang.String
+      field: PARAGRAPHE
+      className: org.tc.osgi.bundle.apt.io.utils.AptSymbols
+   -  value: "* "
+      type: java.lang.String
+      field: CHAPTER
+      className: org.tc.osgi.bundle.apt.io.utils.AptSymbols
+   -  value: "** "
+      type: java.lang.String
+      field: SUBCHAPTER
+      className: org.tc.osgi.bundle.apt.io.utils.AptSymbols
+   -  value: "        *"
+      type: java.lang.String
+      field: ITEM
+      className: org.tc.osgi.bundle.apt.io.utils.AptSymbols
+   -  value: "===="
+      type: java.lang.String
+      field: DELIMITER
+      className: org.tc.osgi.bundle.apt.io.utils.AptSymbols
+   -  value: "["
+      type: java.lang.String
+      field: PICTURE
+      className: org.tc.osgi.bundle.apt.io.utils.AptSymbols

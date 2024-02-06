@@ -11,10 +11,11 @@ import javax.swing.JPanel;
 import org.osgi.framework.BundleContext;
 import org.tc.osgi.bundle.gui.utils.interf.location.IDialogLocationControl;
 import org.tc.osgi.bundle.gui.utils.interf.module.service.IGuiUtilsService;
-import org.tc.osgi.bundle.utils.interf.module.exception.TcOsgiException;
+import org.tc.osgi.bundle.utils.interf.exception.TcOsgiException;
 
 /**
  * GuiUtilsServiceProxy.java.
+ * 
  * @author collonville thomas
  * @version
  * @track
@@ -28,6 +29,7 @@ public class GuiUtilsServiceProxy implements IGuiUtilsService {
 
 	/**
 	 * getInstance.
+	 * 
 	 * @return UtilsServiceProxy
 	 */
 	public static GuiUtilsServiceProxy getInstance() {
@@ -88,6 +90,7 @@ public class GuiUtilsServiceProxy implements IGuiUtilsService {
 
 	/**
 	 * getService.
+	 * 
 	 * @return IGuiUtilsService
 	 */
 	public IGuiUtilsService getService() {
@@ -96,6 +99,7 @@ public class GuiUtilsServiceProxy implements IGuiUtilsService {
 
 	/**
 	 * setService.
+	 * 
 	 * @param service IGuiUtilsService
 	 */
 	public void setService(final IGuiUtilsService service) {

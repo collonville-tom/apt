@@ -7,6 +7,7 @@ import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementEx
 
 /**
  * Symbols.java.
+ * 
  * @author Collonville Thomas
  * @version 0.0.1
  */
@@ -19,6 +20,7 @@ public final class AptSymbols {
 
 	/**
 	 * getInstance.
+	 * 
 	 * @return AptSymbols
 	 */
 	public static AptSymbols getInstance() {
@@ -67,6 +69,7 @@ public final class AptSymbols {
 
 	/**
 	 * aptType.
+	 * 
 	 * @param chaine AptType
 	 * @return String
 	 * @throws FieldTrackingAssignementException
@@ -98,72 +101,78 @@ public final class AptSymbols {
 
 	/**
 	 * getCHAPTER.
+	 * 
 	 * @return String
 	 * @throws FieldTrackingAssignementException
 	 */
 	public String getCHAPTER() throws FieldTrackingAssignementException {
 		if (CHAPTER == null) {
-			PropertyServiceProxy.getInstance().getXMLPropertyFile(AptIoPropertyFile.getInstance().getXMLFile()).fieldTraking(this, "CHAPTER");
+			PropertyServiceProxy.getInstance().getYamlPropertyFile(AptIoPropertyFile.getInstance().getYamlFile()).fieldTraking(this, "CHAPTER");
 		}
 		return CHAPTER;
 	}
 
 	/**
 	 * getDELIMITER.
+	 * 
 	 * @return String
 	 * @throws FieldTrackingAssignementException
 	 */
 	public String getDELIMITER() throws FieldTrackingAssignementException {
 		if (DELIMITER == null) {
-			PropertyServiceProxy.getInstance().getXMLPropertyFile(AptIoPropertyFile.getInstance().getXMLFile()).fieldTraking(this, "DELIMITER");
+			PropertyServiceProxy.getInstance().getYamlPropertyFile(AptIoPropertyFile.getInstance().getYamlFile()).fieldTraking(this, "DELIMITER");
 		}
 		return DELIMITER;
 	}
 
 	/**
 	 * getITEM.
+	 * 
 	 * @return String
 	 * @throws FieldTrackingAssignementException
 	 */
 	public String getITEM() throws FieldTrackingAssignementException {
 		if (ITEM == null) {
-			PropertyServiceProxy.getInstance().getXMLPropertyFile(AptIoPropertyFile.getInstance().getXMLFile()).fieldTraking(this, "ITEM");
+			PropertyServiceProxy.getInstance().getYamlPropertyFile(AptIoPropertyFile.getInstance().getYamlFile()).fieldTraking(this, "ITEM");
 		}
 		return ITEM;
 	}
 
 	/**
 	 * getPARAGRAPHE.
+	 * 
 	 * @return String
 	 * @throws FieldTrackingAssignementException
 	 */
 	public String getPARAGRAPHE() throws FieldTrackingAssignementException {
 		if (PARAGRAPHE == null) {
-			PropertyServiceProxy.getInstance().getXMLPropertyFile(AptIoPropertyFile.getInstance().getXMLFile()).fieldTraking(this, "PARAGRAPHE");
+			PropertyServiceProxy.getInstance().getYamlPropertyFile(AptIoPropertyFile.getInstance().getYamlFile()).fieldTraking(this, "PARAGRAPHE");
 		}
 		return PARAGRAPHE;
 	}
 
 	/**
 	 * getPICTURE.
+	 * 
 	 * @return String
 	 * @throws FieldTrackingAssignementException
 	 */
 	public String getPICTURE() throws FieldTrackingAssignementException {
 		if (PICTURE == null) {
-			PropertyServiceProxy.getInstance().getXMLPropertyFile(AptIoPropertyFile.getInstance().getXMLFile()).fieldTraking(this, "PICTURE");
+			PropertyServiceProxy.getInstance().getYamlPropertyFile(AptIoPropertyFile.getInstance().getYamlFile()).fieldTraking(this, "PICTURE");
 		}
 		return PICTURE;
 	}
 
 	/**
 	 * getSUBCHAPTER.
+	 * 
 	 * @return String
 	 * @throws FieldTrackingAssignementException
 	 */
 	public String getSUBCHAPTER() throws FieldTrackingAssignementException {
 		if (SUBCHAPTER == null) {
-			PropertyServiceProxy.getInstance().getXMLPropertyFile(AptIoPropertyFile.getInstance().getXMLFile()).fieldTraking(this, "SUBCHAPTER");
+			PropertyServiceProxy.getInstance().getYamlPropertyFile(AptIoPropertyFile.getInstance().getYamlFile()).fieldTraking(this, "SUBCHAPTER");
 		}
 		return SUBCHAPTER;
 	}

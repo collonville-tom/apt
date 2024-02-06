@@ -6,6 +6,7 @@ import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementEx
 
 /**
  * AptGuiPropertyFile.java.
+ * 
  * @author collonville thomas
  * @version 0.0.1
  */
@@ -27,6 +28,7 @@ public final class AptGuiPropertyFile extends AbstractPropertyFile {
 
 	/**
 	 * getInstance.
+	 * 
 	 * @return DefaultConfig
 	 * @throws EquinoxConfigException
 	 * @throws FieldTrackingAssignementException
@@ -70,12 +72,13 @@ public final class AptGuiPropertyFile extends AbstractPropertyFile {
 
 	/**
 	 * getExcludeDir.
+	 * 
 	 * @return String
 	 * @throws FieldTrackingAssignementException
 	 */
 	public String getExcludeDir() throws FieldTrackingAssignementException {
 		if (listOfExcludeDir == null) {
-			PropertyServiceProxy.getInstance().getXMLPropertyFile(getXMLFile()).fieldTraking(this, "listOfExcludeDir");
+			PropertyServiceProxy.getInstance().getYamlPropertyFile(getYamlFile()).fieldTraking(this, "listOfExcludeDir");
 		}
 		return listOfExcludeDir;
 	}
@@ -86,6 +89,11 @@ public final class AptGuiPropertyFile extends AbstractPropertyFile {
 	 */
 	@Override
 	public String getXMLFile() {
+		return AptGuiPropertyFile.getInstance().getConfigDirectory() + getConfFile();
+	}
+
+	@Override
+	public String getYamlFile() {
 		return AptGuiPropertyFile.getInstance().getConfigDirectory() + getConfFile();
 	}
 

@@ -1,0 +1,17 @@
+config:
+   -  value: target,.settings,main,test,resources,bundles
+      type: java.lang.String
+      field: listOfExcludeDir
+      className: org.tc.osgi.bundle.apt.gui.conf.AptGuiPropertyFile
+   -  value: tc-osgi-bundle-apt-io
+      type: java.lang.String
+      field: aptIoDependencyBundleName
+      className: org.tc.osgi.bundle.apt.gui.module.activator.AptGuiActivator
+   -  value: tc-osgi-bundle-gui-utils
+      type: java.lang.String
+      field: guiUtilsDependencyBundleName
+      className: org.tc.osgi.bundle.apt.gui.module.activator.AptGuiActivator
+   -  value: Apt Editor
+      type: java.lang.String
+      field: appTitle
+      className: org.tc.osgi.bundle.apt.gui.ihm.frame.AptGuiFrame

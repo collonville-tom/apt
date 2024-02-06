@@ -10,6 +10,7 @@ import org.tc.osgi.bundle.utils.module.service.impl.PropertyUtilsServiceImpl;
 
 /**
  * AptEncoderTest.java.
+ * 
  * @author Collonville Thomas
  * @version 0.0.1
  * @req STD_BUNDLE_APT_CONNECTOR_030

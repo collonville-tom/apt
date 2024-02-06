@@ -4,13 +4,13 @@
 	<groupId>org.tc.module</groupId>
 	<name>${project.artifactId}-${project.version}</name>
 	<packaging>pom</packaging>
-	<version>0.3.0</version>
+	<version>0.11.0-SNAPSHOT</version>
 	<description>Projet parent de gestion des fichiers APT maven</description>
 
 	<parent>
 		<groupId>org.tc.parent</groupId>
 		<artifactId>tc-parent</artifactId>
-		<version>0.8.0</version>
+		<version>0.11.0-SNAPSHOT</version>
 	</parent>
 
 	<modules>

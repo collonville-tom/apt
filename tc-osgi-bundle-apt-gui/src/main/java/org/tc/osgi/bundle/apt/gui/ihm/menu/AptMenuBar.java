@@ -13,10 +13,11 @@ import javax.swing.JSeparator;
 import org.tc.osgi.bundle.apt.gui.ihm.frame.AptGuiFrame;
 import org.tc.osgi.bundle.apt.gui.module.service.BundleUtilsServiceProxy;
 import org.tc.osgi.bundle.apt.gui.module.service.LoggerServiceProxy;
-import org.tc.osgi.bundle.utils.interf.module.exception.TcOsgiException;
+import org.tc.osgi.bundle.utils.interf.exception.TcOsgiException;
 
 /**
  * AptMenuBar.java.
+ * 
  * @author collonville thomas
  * @version
  * @track
@@ -44,6 +45,7 @@ public class AptMenuBar extends JMenuBar {
 
 	/**
 	 * AptMenuBar constructor.
+	 * 
 	 * @param aptGuiFrame AptGuiFrame
 	 */
 	public AptMenuBar(final AptGuiFrame aptGuiFrame) {
@@ -120,10 +122,10 @@ public class AptMenuBar extends JMenuBar {
 			@Override
 			public void actionPerformed(final ActionEvent e) {
 				try {
-					BundleUtilsServiceProxy.getInstance().getBundleKiller().processOnBundle(aptGuiFrame.getContext(), AptGuiFrame.AUTO_BUNDLE_NAME);
+					BundleUtilsServiceProxy.getInstance().getBundleKiller().processOnBundle(aptGuiFrame.getContext(), AptGuiFrame.AUTO_BUNDLE_NAME,
+							AptGuiFrame.AUTO_BUNDLE_VERSION);
 				} catch (final TcOsgiException e1) {
-					LoggerServiceProxy.getInstance().getLogger(AptGuiFrame.class).error("Probleme lors de l'arret du bundle " + AptGuiFrame.AUTO_BUNDLE_NAME,
-						e1);
+					LoggerServiceProxy.getInstance().getLogger(AptGuiFrame.class).error("Probleme lors de l'arret du bundle " + AptGuiFrame.AUTO_BUNDLE_NAME, e1);
 				}
 			}
 		});

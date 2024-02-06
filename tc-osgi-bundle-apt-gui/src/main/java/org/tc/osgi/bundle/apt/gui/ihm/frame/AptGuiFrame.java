@@ -25,17 +25,20 @@ import org.tc.osgi.bundle.apt.gui.module.service.LoggerServiceProxy;
 import org.tc.osgi.bundle.apt.gui.module.service.PropertyServiceProxy;
 import org.tc.osgi.bundle.apt.io.interf.exception.AptException;
 import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementException;
-import org.tc.osgi.bundle.utils.interf.module.exception.TcOsgiException;
+import org.tc.osgi.bundle.utils.interf.exception.TcOsgiException;
 
 /**
  * AptGuiFrame.java.
+ * 
  * @author collonville thomas
  * @version
  * @track
  */
 public class AptGuiFrame extends JFrame {
 
+	// TODO mettre dans le yaml
 	public static final String AUTO_BUNDLE_NAME = "tc-osgi-bundle-apt-gui";
+	public static final String AUTO_BUNDLE_VERSION = "0.11.0.SNAPSHOT";
 
 	/**
 	 * long serialVersionUID.
@@ -69,8 +72,9 @@ public class AptGuiFrame extends JFrame {
 
 	/**
 	 * AptGuiFrame constructor.
+	 * 
 	 * @param context BundleContext
-	 * @throws TcOsgiException 
+	 * @throws TcOsgiException
 	 */
 	public AptGuiFrame(final BundleContext context) throws TcOsgiException {
 		setTitle(getAppTitle());
@@ -82,10 +86,11 @@ public class AptGuiFrame extends JFrame {
 
 	/**
 	 * addTablePane.
+	 * 
 	 * @param file File
 	 * @throws IOException
 	 * @throws FieldTrackingAssignementException
-	 * @throws AptException 
+	 * @throws AptException
 	 */
 	public void addTablePane(final File file) throws IOException, FieldTrackingAssignementException, AptException {
 		new AptTablePane(this, file);
@@ -93,6 +98,7 @@ public class AptGuiFrame extends JFrame {
 
 	/**
 	 * addTreePane.
+	 * 
 	 * @param file File
 	 */
 	public void addTreePane(final File file) {
@@ -102,18 +108,20 @@ public class AptGuiFrame extends JFrame {
 
 	/**
 	 * getAppTitle.
+	 * 
 	 * @return String
 	 * @throws FieldTrackingAssignementException
 	 */
 	private String getAppTitle() throws FieldTrackingAssignementException {
 		if (appTitle == null) {
-			PropertyServiceProxy.getInstance().getXMLPropertyFile(AptGuiPropertyFile.getInstance().getXMLFile()).fieldTraking(this, "appTitle");
+			PropertyServiceProxy.getInstance().getYamlPropertyFile(AptGuiPropertyFile.getInstance().getYamlFile()).fieldTraking(this, "appTitle");
 		}
 		return appTitle;
 	}
 
 	/**
 	 * Getter context.
+	 * 
 	 * @return BundleContext
 	 */
 	public BundleContext getContext() {
@@ -122,6 +130,7 @@ public class AptGuiFrame extends JFrame {
 
 	/**
 	 * getLeft.
+	 * 
 	 * @return JTabbedPane
 	 */
 	public JTabbedPane getLeft() {
@@ -130,6 +139,7 @@ public class AptGuiFrame extends JFrame {
 
 	/**
 	 * getRight.
+	 * 
 	 * @return JTabbedPane
 	 */
 	public JTabbedPane getRight() {
@@ -138,7 +148,8 @@ public class AptGuiFrame extends JFrame {
 
 	/**
 	 * initCloseAction.
-	 * @param menu JPopupMenu
+	 * 
+	 * @param menu      JPopupMenu
 	 * @param component Component
 	 * @return JMenuItem
 	 */
@@ -153,8 +164,7 @@ public class AptGuiFrame extends JFrame {
 			 */
 			@Override
 			public void actionPerformed(final ActionEvent e) {
-				LoggerServiceProxy.getInstance().getLogger(AptGuiFrame.class).debug(
-					"Fermeture de la tabbedPane:" + ((JTabbedPane) component).getSelectedComponent().getName());
+				LoggerServiceProxy.getInstance().getLogger(AptGuiFrame.class).debug("Fermeture de la tabbedPane:" + ((JTabbedPane) component).getSelectedComponent().getName());
 				((JTabbedPane) component).remove(((JTabbedPane) component).getSelectedComponent());
 				menu.setVisible(false);
 
@@ -192,10 +202,10 @@ public class AptGuiFrame extends JFrame {
 		final GroupLayout layout = new GroupLayout(getContentPane());
 		getContentPane().setLayout(layout);
 
-		layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(splitPane, GroupLayout.Alignment.TRAILING,
-			GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE));
-		layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(splitPane, GroupLayout.Alignment.TRAILING,
-			GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE));
+		layout.setHorizontalGroup(
+				layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(splitPane, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE));
+		layout.setVerticalGroup(
+				layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(splitPane, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE));
 	}
 
 	/**

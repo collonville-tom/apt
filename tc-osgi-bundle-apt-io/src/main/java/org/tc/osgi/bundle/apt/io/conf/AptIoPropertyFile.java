@@ -6,6 +6,7 @@ import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementEx
 
 /**
  * AptConfiguration.java.
+ * 
  * @author collonville thomas
  * @version 0.0.1
  */
@@ -27,6 +28,7 @@ public final class AptIoPropertyFile extends AbstractPropertyFile {
 
 	/**
 	 * getInstance.
+	 * 
 	 * @return DefaultConfig
 	 * @throws EquinoxConfigException
 	 * @throws FieldTrackingAssignementException
@@ -52,12 +54,13 @@ public final class AptIoPropertyFile extends AbstractPropertyFile {
 
 	/**
 	 * getAptEOL.
+	 * 
 	 * @return String
 	 * @throws FieldTrackingAssignementException
 	 */
 	public String getAptEOL() throws FieldTrackingAssignementException {
 		if (aptEOL == null) {
-			PropertyServiceProxy.getInstance().getXMLPropertyFile(getXMLFile()).fieldTraking(this, "aptEOL");
+			PropertyServiceProxy.getInstance().getYamlPropertyFile(getYamlFile()).fieldTraking(this, "aptEOL");
 		}
 		return aptEOL;
 	}
@@ -86,6 +89,12 @@ public final class AptIoPropertyFile extends AbstractPropertyFile {
 	 */
 	@Override
 	public String getXMLFile() {
+		return AptIoPropertyFile.getInstance().getConfigDirectory() + getConfFile();
+	}
+
+	@Override
+	public String getYamlFile() {
+		// TODO Auto-generated method stub
 		return AptIoPropertyFile.getInstance().getConfigDirectory() + getConfFile();
 	}
 

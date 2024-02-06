@@ -5,7 +5,7 @@ import org.tc.osgi.bundle.apt.io.interf.module.service.IAptIoService;
 import org.tc.osgi.bundle.apt.io.module.service.LoggerServiceProxy;
 import org.tc.osgi.bundle.apt.io.module.service.PropertyServiceProxy;
 import org.tc.osgi.bundle.apt.io.module.service.impl.AptIoServiceImpl;
-import org.tc.osgi.bundle.utils.interf.module.exception.TcOsgiException;
+import org.tc.osgi.bundle.utils.interf.exception.TcOsgiException;
 import org.tc.osgi.bundle.utils.interf.module.service.ILoggerUtilsService;
 import org.tc.osgi.bundle.utils.interf.module.service.IPropertyUtilsService;
 import org.tc.osgi.bundle.utils.interf.module.utils.AbstractTcOsgiActivator;
@@ -13,6 +13,7 @@ import org.tc.osgi.bundle.utils.interf.module.utils.TcOsgiProxy;
 
 /**
  * Activator.java.
+ * 
  * @author Collonville Thomas
  * @version 0.0.1
  */

@@ -1,9 +1,6 @@
 package org.tc.osgi.bundle.apt.io.utils;
 
-import java.io.IOException;
 import java.util.List;
-
-import junit.framework.Assert;
 
 import org.junit.Test;
 import org.tc.osgi.bundle.apt.io.AptConnector;
@@ -15,10 +12,13 @@ import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementEx
 import org.tc.osgi.bundle.utils.module.service.impl.LoggerUtilsServiceImpl;
 import org.tc.osgi.bundle.utils.module.service.impl.PropertyUtilsServiceImpl;
 
+import junit.framework.Assert;
+
 /**
  * AptCleanerTest.java.
+ * 
  * @author Collonville Thomas
- * @version  0.0.1
+ * @version 0.0.1
  * @req STD_BUNDLE_APT_CONNECTOR_020
  * @track SRS_BUNDLE_APT_CONNECTOR_010, SRS_BUNDLE_APT_CONNECTOR_030
  */
@@ -43,7 +43,7 @@ public class AptCleanerTest {
 			LoggerServiceProxy.getInstance().getLogger(AptConnector.class).debug(buff.toString());
 		} catch (FieldTrackingAssignementException | AptConnectorException e) {
 			Assert.fail(e.getMessage());
-		} 
+		}
 	}
 
 }
